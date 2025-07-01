@@ -38,6 +38,7 @@ return {
 				"graphql",
 				"emmet_ls",
 				"prismals",
+				"ruff",
 				"pyright",
 			},
 			-- auto-install configured servers (with lspconfig)
@@ -46,13 +47,14 @@ return {
 
 		mason_tool_installer.setup({
 			ensure_installed = {
+				"black", -- python formatter
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"isort", -- python formatter
-				"black", -- python formatter
 				"pylint", -- python linter
 				"eslint_d", -- js linter
 				"clang_format",
+				"mypy",
 			},
 		})
 	end,
